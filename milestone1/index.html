@@ -84,11 +84,11 @@
           <!-- CONTACT -->
           <div class="contact d-flex justify-between">
             <div class="left d-flex align-center">
-              <img src="" alt="avatar" class="m-10">
+              <img :src="'/milestone1/assets/img/' + userActive.avatar" alt="avatar" class="m-10">
               
               <div class="text">
-                <h6>Michele</h6>
-                <p class="dark-grey">Ultimo messaggio inviato</p>
+                <h6>{{userActive.name}}</h6>
+                <p class="dark-grey">Ultimo accesso oggi alle 12:00</p>
               </div>
             </div>
             

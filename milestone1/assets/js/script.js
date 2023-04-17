@@ -5,10 +5,25 @@ createApp({
   data() {
     return{
       contacts,
+      userActive: {}
+    }
+  },
+
+  methods: {
+    active() {
+      this.contacts.forEach(contact => {
+        if (contact.visible) {
+          this.userActive = {
+            name: contact.name,
+            avatar: contact.avatar
+          }
+        }
+      })
     }
   },
 
   mounted(){
-    console.log(this.contacts);
+    this.active()
+    console.log(this.userActive);
   }
 }).mount('#app');
