@@ -57,6 +57,7 @@
                 <li
                   v-for="contact in contacts"
                   class="contact-message d-flex"
+                  :class="{'active' : contact.visible}"
                 >
                   <img
                     :src="'/milestone1/assets/img/' + contact.avatar"
