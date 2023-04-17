@@ -37,11 +37,8 @@ p{
 /* Contacts */
 
 .contacts{
-
   width: 35%;
   height: 100%;
-  background-color: cadetblue;
-  border: 1px solid black;
 }
 
 .user{
@@ -62,6 +59,10 @@ p{
   width: 70%;
 }
 
+.user .right i{
+  cursor: pointer;
+}
+
 .notifications{
   height: 12%;
   background-color: #8edafc;
@@ -72,12 +73,14 @@ p{
   width: 35px;
   margin-right: 5px;
   margin-left: 20px;
+  color: #8dd9fc;
   background-color: white;
   border-radius: 50%;
 }
 
 .notifications p{
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .contacts-list{
@@ -108,6 +111,7 @@ p{
   height: 50px;
   padding: 5px 0;
   border-bottom: #e9ebeb 1px solid;
+  cursor: pointer;
 }
 
 .active{
