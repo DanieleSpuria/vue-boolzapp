@@ -56,7 +56,7 @@ i{
 }
 
 .user{
-  height: 10%;
+  height: 8%;
   background-color: #eaeaea;
 }
 
@@ -74,7 +74,7 @@ i{
 }
 
 .notifications{
-  height: 10%;
+  height: 8%;
   background-color: #8edafc;
 }
 
@@ -91,7 +91,7 @@ i{
 }
 
 .contacts-list{
-  height: 80%;
+  height: 84%;
   background-color:white;
 }
 
@@ -113,6 +113,7 @@ i{
 }
 
 .contacts-list .search input{
+  width: 100%;
   border: none;
 }
 
@@ -142,13 +143,13 @@ i{
 }
 
 .contact{
-  height: 10%;
+  height: 8%;
   background-color: #eaeaea;
   border-left: 1px solid #d8d8d8;
 }
 
 .messages{
-  height: 80%;
+  height: 84%;
   padding: 20px 60px;
   background-image: url('../img/mine.jpg');
   overflow: scroll;
@@ -173,7 +174,7 @@ i{
 }
 
 .writing{
-  height: 10%;
+  height: 8%;
   background-color: #f3eeea;
 }
 
@@ -224,7 +225,7 @@ i{
 }
 
 .m-10{
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .circle{
