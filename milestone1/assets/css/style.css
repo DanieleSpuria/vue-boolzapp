@@ -9,6 +9,7 @@
 body{
   height: 100vh;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
 }
 
 main{
@@ -21,12 +22,11 @@ img{
 }
 
 p{
-  font-size: 10px;
+  font-size: 15px;
 }
 
 input::placeholder{
-  /* font-family: FontAwesome; */
-  font-size: 10px;
+  font-size: 15px;
   color: #96868a;
 }
 
@@ -74,7 +74,7 @@ i{
 }
 
 .notifications{
-  height: 12%;
+  height: 10%;
   background-color: #8edafc;
 }
 
@@ -91,17 +91,19 @@ i{
 }
 
 .contacts-list{
-  height: 78%;
+  height: 80%;
   background-color:white;
 }
 
 .contacts-list .search{
+  height: 8%;
   padding: 1%;
   background-color: #fafafa;
 }
 
 .contacts-list .box-search{
   width: 98%;
+  height: 98%;
   background-color: white;
   border: 1px solid #f6f6f6;
 }
@@ -148,7 +150,7 @@ i{
 .messages{
   height: 80%;
   padding: 20px 60px;
-  background-image: url('/milestone1/assets/img/mine.jpg');
+  background-image: url('../img/mine.jpg');
   overflow: scroll;
 }
 
@@ -226,7 +228,7 @@ i{
 }
 
 .circle{
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
