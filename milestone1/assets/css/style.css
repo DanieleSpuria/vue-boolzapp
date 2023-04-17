@@ -8,6 +8,7 @@
 
 body{
   height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 main{
@@ -27,7 +28,7 @@ p{
 }
 
 input::placeholder{
-  font-family: FontAwesome;
+  /* font-family: FontAwesome; */
   font-size: 10px;
   color: #96868a;
 }
@@ -105,9 +106,18 @@ i{
   background-color: #fafafa;
 }
 
-.contacts-list .search input{
-  width: 100%;
+.contacts-list .box-search{
+  width: 98%;
+  background-color: white;
   border: 1px solid #f6f6f6;
+}
+
+.contacts-list .box-search i{
+  font-size: 12px;
+}
+
+.contacts-list .search input{
+  border: none;
 }
 
 .contacts-list .list{
