@@ -24,6 +24,5 @@ createApp({
 
   mounted(){
     this.active()
-    console.log(this.userActive);
   }
 }).mount('#app');

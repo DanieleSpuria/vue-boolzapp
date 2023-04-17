@@ -56,18 +56,24 @@
               <ul>
                 <li
                   v-for="contact in contacts"
-                  class="contact-message d-flex"
+                  class="contact-message d-flex justify-between"
                   :class="{'active' : contact.visible}"
                 >
-                  <img
+                  <div class="d-flex">
+                    <img
                     :src="'/milestone1/assets/img/' + contact.avatar"
                     alt="avatar"
                     class="m-10"
-                  >
-                  
-                  <div class="text">
-                    <h5>{{contact.name}}</h5>
-                    <p class="grey">Ultimo messaggio inviato</p>
+                    >
+                    
+                    <div class="text">
+                      <h5>{{contact.name}}</h5>
+                      <p class="grey">Ultimo messaggio inviato</p>
+                    </div>
+                  </div>
+                
+                  <div class="left d-flex justify-end grey m-10">
+                    <p>12:00</p>
                   </div>
                 </li>
               </ul>
