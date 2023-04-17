@@ -15,6 +15,10 @@ main{
   background-color: aqua;
 }
 
+p{
+  font-size: 10px;
+}
+
 .app{
   height: 100%;
 }
@@ -41,32 +45,44 @@ main{
 }
 
 .user{
-
   height: 10%;
   background-color: #eaeaea;
-
-  border: 1px solid black;
 }
 
 .user .left{
   width: 30%;
 }
 
+.user .left img{
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
 .user .right{
-  justify-content: end;
   width: 70%;
 }
 
 .notifications{
+  height: 12%;
+  background-color: #8edafc;
+}
 
-  height: 10%;
-  border: 1px solid black;
-  background-color: cornsilk;
+.notifications .bell{
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.notifications p{
+  text-decoration: underline;
 }
 
 .contacts-list{
 
-  height: 80%;
+  height: 78%;
   border: 1px solid black;
   background-color:darksalmon ;
 }
@@ -122,6 +138,10 @@ main{
   justify-content: space-between;
 }
 
+.justify-end{
+  justify-content: end;
+}
+
 .align-center{
   align-items: center;
 }
@@ -130,6 +150,10 @@ main{
   color: #b1b1b1;
 }
 
-.p-10{
-  padding: 0 10px;
+.dark-grey{
+  color: #5a7c95;
+}
+
+.m-10{
+  margin: 0 10px;
 }
