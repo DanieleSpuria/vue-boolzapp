@@ -1,14 +1,22 @@
+/* General */ 
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-main{
-  display: flex;
-  align-items: center;
+body{
   height: 100vh;
+}
+
+main{
+  height: 100%;
   background-color: aqua;
+}
+
+.app{
+  height: 100%;
 }
 
 .container{
@@ -16,4 +24,64 @@ main{
   height: 90%;
   margin: 0 auto;
   background-color: aquamarine;
+}
+
+
+
+
+
+/* Contacts */
+
+.contacts{
+
+  width: 35%;
+  height: 100%;
+  background-color: cadetblue;
+}
+
+.user{
+
+  height: 10%;
+  background-color: antiquewhite;
+}
+
+.notifications{
+
+  height: 10%;
+  background-color: cornsilk;
+}
+
+.contacts-list{
+
+  height: 80%;
+  background-color:darksalmon ;
+}
+
+
+
+
+/* Chat */
+
+.chat{
+
+  width: 65%;
+  height: 100%;
+  background-color: cornflowerblue;
+}
+
+
+
+
+/* Uility */ 
+
+.d-flex{
+  display: flex;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.align-center{
+  align-items: center;
 }
