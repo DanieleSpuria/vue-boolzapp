@@ -15,6 +15,11 @@ main{
   background-color: aqua;
 }
 
+img{
+  width: 35px;
+  border-radius: 50%;
+}
+
 p{
   font-size: 10px;
 }
