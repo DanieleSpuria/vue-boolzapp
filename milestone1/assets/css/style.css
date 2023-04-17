@@ -136,10 +136,16 @@ i{
 }
 
 .messages{
-
   height: 80%;
-  border: 1px solid black;
-  background-color:chocolate ;
+  padding: 20px 60px;
+  background-image: url('/milestone1/assets/img/mine.jpg');
+}
+
+.message p{
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .writing{
