@@ -17,10 +17,7 @@ main{
 }
 
 img{
-  width: 35px;
-  height: 35px;
   margin: 5px 0;
-  border-radius: 50%;
 }
 
 p{
@@ -82,13 +79,10 @@ i{
 }
 
 .notifications .bell{
-  height: 35px;
-  width: 35px;
   margin-right: 5px;
   margin-left: 20px;
   color: #8dd9fc;
   background-color: white;
-  border-radius: 50%;
 }
 
 .notifications p{
@@ -197,7 +191,7 @@ i{
 
 
 
-/* Uility */ 
+/* Uilities */ 
 
 .d-flex{
   display: flex;
@@ -229,4 +223,10 @@ i{
 
 .m-10{
   margin: 0 10px;
+}
+
+.circle{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
 }
