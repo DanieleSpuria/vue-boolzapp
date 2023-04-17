@@ -114,6 +114,7 @@ i{
 
 .contacts-list .search input{
   width: 100%;
+  padding: 8px 5px;
   border: none;
 }
 
