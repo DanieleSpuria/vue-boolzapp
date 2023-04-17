@@ -81,10 +81,37 @@ p{
 }
 
 .contacts-list{
-
   height: 78%;
-  border: 1px solid black;
-  background-color:darksalmon ;
+  background-color:white;
+}
+
+.contacts-list .search{
+  padding: 1%;
+  background-color: #fafafa;
+}
+
+.contacts-list .search input{
+  width: 100%;
+}
+
+.contacts-list .search input::placeholder{
+  font-size: 10px;
+  color: #96868a;
+}
+
+.contacts-list .list{
+  height: 92%;
+  overflow: scroll;
+}
+
+.contact-message{
+  height: 50px;
+  padding: 5px 0;
+  border-bottom: #e9ebeb 1px solid;
+}
+
+.active{
+  background-color: #e9ebeb;
 }
 
 
