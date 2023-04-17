@@ -37,23 +37,27 @@ main{
   width: 35%;
   height: 100%;
   background-color: cadetblue;
+  border: 1px solid black;
 }
 
 .user{
 
   height: 10%;
   background-color: antiquewhite;
+  border: 1px solid black;
 }
 
 .notifications{
 
   height: 10%;
+  border: 1px solid black;
   background-color: cornsilk;
 }
 
 .contacts-list{
 
   height: 80%;
+  border: 1px solid black;
   background-color:darksalmon ;
 }
 
@@ -66,7 +70,29 @@ main{
 
   width: 65%;
   height: 100%;
+  border: 1px solid black;
   background-color: cornflowerblue;
+}
+
+.contact{
+
+  height: 10%;
+  border: 1px solid black;
+  background-color: antiquewhite;
+}
+
+.messages{
+
+  height: 80%;
+  border: 1px solid black;
+  background-color:chocolate ;
+}
+
+.writing{
+
+  height: 10%;
+  border: 1px solid black;
+  background-color: darkturquoise;
 }
 
 
