@@ -1,7 +1,7 @@
 export default [
   {
       name: 'Michele',
-      avatar: 'avatar_1.png',
+      avatar: 'avatar_1.jpg',
       visible: false,
       messages: [
           {
@@ -23,7 +23,7 @@ export default [
   },
   {
       name: 'Fabio',
-      avatar: 'avatar_2.png',
+      avatar: 'avatar_2.jpg',
       visible: false,
       messages: [
           {
@@ -45,7 +45,7 @@ export default [
   },
   {
       name: 'Samuele',
-      avatar: 'avatar_3.png',
+      avatar: 'avatar_3.jpg',
       visible: false,
       messages: [
           {
@@ -67,7 +67,7 @@ export default [
   },
   {
       name: 'Alessandro B.',
-      avatar: 'avatar_4.png',
+      avatar: 'avatar_4.jpg',
       visible: true,
       messages: [
           {
@@ -84,7 +84,7 @@ export default [
   },
   {
       name: 'Alessandro L.',
-      avatar: 'avatar_5.png',
+      avatar: 'avatar_5.jpg',
       visible: false,
       messages: [
           {
@@ -101,7 +101,7 @@ export default [
   },
   {
       name: 'Claudia',
-      avatar: 'avatar_5.png',
+      avatar: 'avatar_5.jpg',
       visible: false,
       messages: [
           {
@@ -123,7 +123,7 @@ export default [
   },
   {
       name: 'Federico',
-      avatar: 'avatar_7.png',
+      avatar: 'avatar_7.jpg',
       visible: false,
       messages: [
           {
@@ -140,7 +140,7 @@ export default [
   },
   {
       name: 'Davide',
-      avatar: 'avatar_8.png',
+      avatar: 'avatar_8.jpg',
       visible: false,
       messages: [
           {

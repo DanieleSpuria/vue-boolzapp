@@ -17,6 +17,8 @@ main{
 
 img{
   width: 35px;
+  height: 35px;
+  margin: 5px 0;
   border-radius: 50%;
 }
 
@@ -114,7 +116,6 @@ i{
 }
 
 .contact-message{
-  height: 50px;
   padding: 5px 0;
   border-top: #e9ebeb 1px solid;
   cursor: pointer;

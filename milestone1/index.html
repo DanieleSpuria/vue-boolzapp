@@ -54,20 +54,18 @@
 
             <div class="list">
               <ul>
-                <li class="contact-message d-flex">
-                  <img src="" alt="avatar" class="m-10">
+                <li
+                  v-for="contact in contacts"
+                  class="contact-message d-flex"
+                >
+                  <img
+                    :src="'/milestone1/assets/img/' + contact.avatar"
+                    alt="avatar"
+                    class="m-10"
+                  >
                   
                   <div class="text">
-                    <h5>Michele</h5>
-                    <p class="grey">Ultimo messaggio inviato</p>
-                  </div>
-                </li>
-
-                <li class="contact-message d-flex active">
-                  <img src="" alt="avatar" class="m-10">
-                  
-                  <div class="text">
-                    <h5>Michele</h5>
+                    <h5>{{contact.name}}</h5>
                     <p class="grey">Ultimo messaggio inviato</p>
                   </div>
                 </li>
