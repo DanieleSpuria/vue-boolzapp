@@ -139,12 +139,24 @@ i{
   height: 80%;
   padding: 20px 60px;
   background-image: url('/milestone1/assets/img/mine.jpg');
+  overflow: scroll;
+}
+
+.message{
+  margin: 5px 0;
 }
 
 .message p{
-  width: 200px;
+  width: 220px;
   padding: 10px;
   border-radius: 5px;
+}
+
+.sent{
+  background-color: #d5f9ba;
+}
+
+.received{
   background-color: white;
 }
 
