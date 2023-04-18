@@ -24,7 +24,18 @@ createApp({
         message: this.inputMessage,
         status: 'sent'
       }),
+      this.answer(),
       this.inputMessage = ''
+    },
+
+    answer() {
+      setTimeout(() => {
+        this.userActive.messages.push({
+          message: 'ok!!',
+          status: 'received'
+        })
+      }, 1000)
+      
     }
   },
 
