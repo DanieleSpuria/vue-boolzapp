@@ -70,7 +70,7 @@ createApp({
     },
 
     now() {
-      return dt.now().toLocaleString(dt.DATETIME_SHORT)
+      return dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
     }
   },
 
