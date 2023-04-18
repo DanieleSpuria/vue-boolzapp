@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js' integrity='sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Boolzapp</title>
 </head>
@@ -57,8 +58,7 @@
                 <input
                   type="text"
                   placeholder="Cerca o inizia una nuova chat"
-                  v-model="inputSearch"
-                >
+                  v-model="inputSearch">
                 {{ins}}
               </div>
             </div>
@@ -70,14 +70,12 @@
                 :class="{'active' : contact.name === userActive.name}"
                 v-for="(contact) in contacts"
                 v-show ="contact.visible"
-                @click="active(contact)"
-                >
+                @click="active(contact)">
                   <div class="d-flex">
                     <img
                     :src="'assets/img/' + contact.avatar"
                     alt="avatar"
-                    class="m-10 circle"
-                    >
+                    class="m-10 circle">
                     
                     <div class="text">
                       <h5>{{contact.name}}</h5>
@@ -85,8 +83,9 @@
                     </div>
                   </div>
                 
-                  <div class="left d-flex justify-end grey m-10">
-                    <span>12:00</span>
+                  <div
+                    class="left d-flex justify-end grey m-10">
+                    <span >{{contact.messages[contact.messages.length - 1].date}}</span>
                   </div>
                 </li>
               </ul>
@@ -123,10 +122,13 @@
           <div
             class="chat-messages "
           >
-                <span 
-                  :class="message.status === 'sent' ? 'sent' : 'received'"
-                  v-for="message in userActive.messages"
-                >{{message.message}}</span>
+              <div 
+              v-for="message in userActive.messages"
+              :class="message.status === 'sent' ? 'sent' : 'received'"
+              class="chat-message">
+                <span>{{message.message}}</span>
+                <span class="grey">{{message.date}}</span>
+              </div>
           </div>
           <!-- /MESSAGES -->
           
@@ -139,8 +141,7 @@
               type="text"
               placeholder="Scrivi un messaggio"
               v-model="inputMessage"
-              @keyup.enter="sendMessage"
-            >
+              @keyup.enter="sendMessage">
             <div class="right d-flex justify-center align-center">
               <i class="fa-solid fa-microphone dark-grey"></i>
             </div>

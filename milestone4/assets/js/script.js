@@ -1,4 +1,5 @@
 const {createApp} = Vue;
+const dt = luxon.DateTime;
 import contacts from './db.js';
 
 createApp({
@@ -25,7 +26,8 @@ createApp({
     sendMessage() {
       this.userActive.messages.push({
         message: this.inputMessage,
-        status: 'sent'
+        status: 'sent',
+        date: this.now
       }),
       this.answer(),
       this.inputMessage = ''
@@ -35,7 +37,8 @@ createApp({
       setTimeout(() => {
         this.userActive.messages.push({
           message: 'ok!!',
-          status: 'received'
+          status: 'received',
+          date: this.now
         })
       }, 1000)
       
@@ -45,7 +48,7 @@ createApp({
       this.splitSearch = this.inputSearch.toUpperCase().split('');
       contacts.forEach(contact => {
         this.splitContact = contact.name.toUpperCase().split('');
-
+        
         if (this.splitSearch.length === 0) {
           contact.visible = true
         } else {
@@ -64,6 +67,14 @@ createApp({
   computed: {
     ins() {
       this.search()
+    },
+
+    now() {
+      return dt.now().toLocaleString(dt.DATETIME_SHORT)
     }
+  },
+
+  mounted(){
+    console.log();
   }
 }).mount('#app');
