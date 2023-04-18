@@ -20,7 +20,11 @@ createApp({
     },
 
     sendMessage() {
-      this.userActive.messages.push(this.inputMessage)
+      this.userActive.messages.push({
+        message: this.inputMessage,
+        status: 'sent'
+      }),
+      this.inputMessage = ''
     }
   },
 
