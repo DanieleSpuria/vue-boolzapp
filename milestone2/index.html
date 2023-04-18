@@ -115,7 +115,7 @@
           
           <!-- MESSAGES -->
           <div
-            class="chat-messages"
+            class="chat-messages "
           >
                 <p 
                   v-for="message in userActive.messages"
@@ -129,7 +129,12 @@
             <div class="left d-flex justify-center align-center">
               <i class="fa-regular fa-face-smile dark-grey"></i>
             </div>
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input
+              v-model="inputMessage"
+              @keyup.enter="sendMessage"
+              type="text"
+              placeholder="Scrivi un messaggio"
+            >
             <div class="right d-flex justify-center align-center">
               <i class="fa-solid fa-microphone dark-grey"></i>
             </div>

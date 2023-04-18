@@ -158,10 +158,11 @@ i{
 }
 
 .chat-messages p{
-  max-width: 60%;
+  max-width: 50%;
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
+  clear: both;
 }
 
 .sent{
@@ -234,8 +235,3 @@ i{
   border-radius: 50%;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}

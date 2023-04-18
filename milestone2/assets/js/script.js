@@ -5,7 +5,8 @@ createApp({
   data() {
     return{
       contacts,
-      userActive: contacts[0]
+      userActive: contacts[0],
+      inputMessage: ''
     }
   },
 
@@ -16,11 +17,15 @@ createApp({
         avatar: contact.avatar,
         messages: contact.messages
       }
+    },
+
+    sendMessage() {
+      this.userActive.messages.push(this.inputMessage)
     }
   },
 
   mounted() {
-    console.log(this.contacts[0]);
+    console.log(this.userActive.messages);
   }
 
 }).mount('#app');
