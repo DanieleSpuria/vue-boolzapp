@@ -68,7 +68,7 @@ export default [
   {
       name: 'Alessandro B.',
       avatar: 'avatar_4.jpg',
-      visible: true,
+      visible: false,
       messages: [
           {
               date: '10/01/2020 15:30:55',
