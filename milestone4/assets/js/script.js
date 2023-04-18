@@ -42,9 +42,9 @@ createApp({
     },
 
     search() {
-      this.splitSearch = this.inputSearch.split('')
+      this.splitSearch = this.inputSearch.toUpperCase().split('');
       contacts.forEach(contact => {
-        this.splitContact = contact.name.split('');
+        this.splitContact = contact.name.toUpperCase().split('');
 
         if (this.splitSearch.length === 0) {
           contact.visible = true
@@ -64,14 +64,6 @@ createApp({
   computed: {
     ins() {
       this.search()
-      console.log(this.splitSearch.length);
     }
-  },
-  
-  mounted() {
-    
-    // console.log(this.);
-
   }
-
 }).mount('#app');
