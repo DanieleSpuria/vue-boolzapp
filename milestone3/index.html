@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js' integrity='sha512-DJ2+sosWB5FnZAIeCWAHu2gxQ7Gi438oOZLcBQSOrW8gD0s7LIXDv/5RW76B3FcljF40BXnfqNIo6Dhp7dFHJg==' crossorigin='anonymous'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Boolzapp</title>
+</head>
+<body>
+
+  <div id="app" class="app">
+    <main class="d-flex align-center">
+      <div class="container d-flex">
+
+        <!-- CONTACTS -->
+        <div class="contacts">
+
+          <!-- USER -->
+          <div class="user d-flex">
+            <div class="left d-flex align-center">
+              <img src="assets/img/avatar_io.jpg" alt="avatar" class="m-10 circle">
+              <h6 class="name">Gigi</h6>
+            </div>
+            
+            <div class="right d-flex justify-end align-center grey">
+              <i class="fa-solid fa-circle-notch m-10"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical m-10"></i>
+            </div>
+          </div>
+          <!-- /USER -->
+          
+          <!-- NOTIFICATIONS -->
+          <div class="notifications d-flex align-center">
+            <div class="bell d-flex justify-center align-center m-20 circle">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+
+            <div class="text">
+              <h6>Ricevi notifiche di nuovi messaggi</h6>
+              <p class="dark-grey">Attiva notifiche desktop</p>
+            </div>
+          </div>
+          <!-- /NOTIFICATIONS -->
+          
+          <!-- CONTACT-LIST -->
+          <div class="contacts-list">
+            <div class="search d-flex justify-center align-center">
+              <div class="box-search d-flex align-center">
+                <i class="fa-solid fa-magnifying-glass grey m-10"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+              </div>
+            </div>
+
+            <div class="list">
+              <ul>
+                <li
+                  @click="active(contact)"
+                  v-for="(contact) in contacts"
+                  class="contact-message d-flex justify-between"
+                  :class="{'active' : contact.name === userActive.name}"
+                >
+                  <div class="d-flex">
+                    <img
+                    :src="'assets/img/' + contact.avatar"
+                    alt="avatar"
+                    class="m-10 circle"
+                    >
+                    
+                    <div class="text">
+                      <h5>{{contact.name}}</h5>
+                      <p class="grey">{{contact.messages[contact.messages.length - 1].message}}</p>
+                    </div>
+                  </div>
+                
+                  <div class="left d-flex justify-end grey m-10">
+                    <p>12:00</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /CONTACT-LIST -->
+
+        </div>
+        <!-- /CONTACTS -->
+
+        <!-- CHAT -->
+        <div class="chat">
+
+          <!-- CONTACT -->
+          <div class="contact d-flex justify-between">
+            <div class="left d-flex align-center">
+              <img :src="'assets/img/' + userActive.avatar" alt="avatar" class="m-10 circle">
+              
+              <div class="text">
+                <h6>{{userActive.name}}</h6>
+                <p class="dark-grey">Ultimo accesso oggi alle 12:00</p>
+              </div>
+            </div>
+            
+            <div class="right d-flex justify-end align-center grey">
+              <i class="fa-solid fa-magnifying-glass m-10"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical m-10"></i>
+            </div>
+          </div>
+          <!-- /CONTACT -->
+          
+          <!-- MESSAGES -->
+          <div
+            class="chat-messages "
+          >
+                <p 
+                  v-for="message in userActive.messages"
+                  :class="message.status === 'sent' ? 'sent' : 'received'"
+                >{{message.message}}</p>
+          </div>
+          <!-- /MESSAGES -->
+          
+          <!-- WRITING -->
+          <div class="writing d-flex justify-between align-center">
+            <div class="left d-flex justify-center align-center">
+              <i class="fa-regular fa-face-smile dark-grey"></i>
+            </div>
+            <input
+              v-model="inputMessage"
+              @keyup.enter="sendMessage"
+              type="text"
+              placeholder="Scrivi un messaggio"
+            >
+            <div class="right d-flex justify-center align-center">
+              <i class="fa-solid fa-microphone dark-grey"></i>
+            </div>
+          </div>
+          <!-- /WRITING -->
+
+        </div>
+        <!-- /CHAT -->  
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="assets/js/script.js"></script>
+</body>
+</html>
