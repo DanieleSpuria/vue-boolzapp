@@ -179,6 +179,7 @@ i{
 }
 
 .received{
+  float: left;
   background-color: white;
 }
 

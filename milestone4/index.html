@@ -68,7 +68,7 @@
                 <li
                 class="contact-message d-flex justify-between"
                 :class="{'active' : contact.name === userActive.name}"
-                v-for="(contact) in contacts"
+                v-for="contact in contacts"
                 v-show ="contact.visible"
                 @click="active(contact)">
                   <div class="d-flex">
