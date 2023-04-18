@@ -42,31 +42,32 @@ createApp({
     },
 
     search() {
+      this.splitSearch = this.inputSearch.split('')
       contacts.forEach(contact => {
         this.splitContact = contact.name.split('');
-        for (let i = 0; i < this.splitSearch.length; i++) {
-          if (this.splitContact.includes(this.splitSearch[i])) {
-            contact.visible = true;
-          } else {
-            contact.visible = false;
+
+        if (this.splitSearch.length === 0) {
+          contact.visible = true
+        } else {
+          for (let i = 0; i < this.splitSearch.length; i++) {
+            if (this.splitContact.includes(this.splitSearch[i])) {
+              contact.visible = true;
+            } else {
+              contact.visible = false;
+            }
           }
-
-
-
-          // console.log(this.splitContact[i].toUpperCase().includes());
         }
       })
     }
   },
-
+  
   computed: {
     ins() {
-      this.splitSearch = this.inputSearch.split('')
       this.search()
-      return this.splitSearch;
+      console.log(this.splitSearch.length);
     }
   },
-
+  
   mounted() {
     
     // console.log(this.);
