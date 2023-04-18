@@ -6,7 +6,10 @@ createApp({
     return{
       contacts,
       userActive: contacts[0],
-      inputMessage: ''
+      inputSearch: '',
+      inputMessage: '',
+      splitSearch: [],
+      splitContact: []
     }
   },
 
@@ -36,11 +39,38 @@ createApp({
         })
       }, 1000)
       
+    },
+
+    search() {
+      contacts.forEach(contact => {
+        this.splitContact = contact.name.split('');
+        for (let i = 0; i < this.splitSearch.length; i++) {
+          if (this.splitContact.includes(this.splitSearch[i])) {
+            contact.visible = true;
+          } else {
+            contact.visible = false;
+          }
+
+
+
+          // console.log(this.splitContact[i].toUpperCase().includes());
+        }
+      })
+    }
+  },
+
+  computed: {
+    ins() {
+      this.splitSearch = this.inputSearch.split('')
+      this.search()
+      return this.splitSearch;
     }
   },
 
   mounted() {
-    console.log(this.userActive.messages);
+    
+    // console.log(this.);
+
   }
 
 }).mount('#app');

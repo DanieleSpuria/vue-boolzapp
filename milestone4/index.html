@@ -54,17 +54,23 @@
             <div class="search d-flex justify-center align-center">
               <div class="box-search d-flex align-center">
                 <i class="fa-solid fa-magnifying-glass grey m-10"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input
+                  type="text"
+                  placeholder="Cerca o inizia una nuova chat"
+                  v-model="inputSearch"
+                >
+                {{ins}}
               </div>
             </div>
 
             <div class="list">
               <ul>
                 <li
-                  @click="active(contact)"
-                  v-for="(contact) in contacts"
-                  class="contact-message d-flex justify-between"
-                  :class="{'active' : contact.name === userActive.name}"
+                class="contact-message d-flex justify-between"
+                :class="{'active' : contact.name === userActive.name}"
+                v-for="(contact) in contacts"
+                v-show ="contact.visible"
+                @click="active(contact)"
                 >
                   <div class="d-flex">
                     <img
@@ -118,8 +124,8 @@
             class="chat-messages "
           >
                 <span 
-                  v-for="message in userActive.messages"
                   :class="message.status === 'sent' ? 'sent' : 'received'"
+                  v-for="message in userActive.messages"
                 >{{message.message}}</span>
           </div>
           <!-- /MESSAGES -->
@@ -130,10 +136,10 @@
               <i class="fa-regular fa-face-smile dark-grey"></i>
             </div>
             <input
-              v-model="inputMessage"
-              @keyup.enter="sendMessage"
               type="text"
               placeholder="Scrivi un messaggio"
+              v-model="inputMessage"
+              @keyup.enter="sendMessage"
             >
             <div class="right d-flex justify-center align-center">
               <i class="fa-solid fa-microphone dark-grey"></i>

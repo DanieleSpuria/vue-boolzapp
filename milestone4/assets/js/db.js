@@ -2,6 +2,7 @@ export default [
   {
       name: 'Michele',
       avatar: 'avatar_1.jpg',
+      visible: true,
       messages: [
           {
               date: '10/01/2020 15:30:55',
@@ -23,6 +24,7 @@ export default [
   {
       name: 'Fabio',
       avatar: 'avatar_2.jpg',
+      visible: true,
       messages: [
           {
               date: '20/03/2020 16:30:00',
@@ -44,6 +46,7 @@ export default [
   {
       name: 'Samuele',
       avatar: 'avatar_3.jpg',
+      visible: true,
       messages: [
           {
               date: '28/03/2020 10:10:40',
@@ -65,6 +68,7 @@ export default [
   {
       name: 'Alessandro B.',
       avatar: 'avatar_4.jpg',
+      visible: true,
       messages: [
           {
               date: '10/01/2020 15:30:55',
@@ -81,6 +85,7 @@ export default [
   {
       name: 'Alessandro L.',
       avatar: 'avatar_5.jpg',
+      visible: true,
       messages: [
           {
               date: '10/01/2020 15:30:55',
@@ -97,6 +102,7 @@ export default [
   {
       name: 'Claudia',
       avatar: 'avatar_5.jpg',
+      visible: true,
       messages: [
           {
               date: '10/01/2020 15:30:55',
@@ -118,6 +124,7 @@ export default [
   {
       name: 'Federico',
       avatar: 'avatar_7.jpg',
+      visible: true,
       messages: [
           {
               date: '10/01/2020 15:30:55',
@@ -134,6 +141,7 @@ export default [
   {
       name: 'Davide',
       avatar: 'avatar_8.jpg',
+      visible: true,
       messages: [
           {
               date: '10/01/2020 15:30:55',
