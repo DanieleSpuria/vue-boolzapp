@@ -15,7 +15,8 @@ createApp({
         if (contact.visible) {
           this.userActive = {
             name: contact.name,
-            avatar: contact.avatar
+            avatar: contact.avatar,
+            message: contact.messages
           }
         }
       })
@@ -24,5 +25,6 @@ createApp({
 
   mounted(){
     this.active()
+    console.log(this.userActive);
   }
 }).mount('#app');
