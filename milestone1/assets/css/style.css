@@ -161,7 +161,7 @@ i{
 }
 
 .message p{
-  width: 220px;
+  max-width: 60%;
   padding: 10px;
   border-radius: 5px;
 }
