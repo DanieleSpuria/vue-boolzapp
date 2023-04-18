@@ -5,6 +5,7 @@ import contacts from './db.js';
 createApp({
   data() {
     return{
+      clock: null,
       contacts,
       userActive: contacts[0],
       inputSearch: '',
@@ -27,7 +28,7 @@ createApp({
       this.userActive.messages.push({
         message: this.inputMessage,
         status: 'sent',
-        date: this.now
+        date: this.clock
       }),
       this.answer(),
       this.inputMessage = ''
@@ -38,7 +39,7 @@ createApp({
         this.userActive.messages.push({
           message: 'ok!!',
           status: 'received',
-          date: this.now
+          date: this.clock
         })
       }, 1000)
       
@@ -61,20 +62,22 @@ createApp({
           }
         }
       })
+    },
+
+    now() {
+      setInterval(() => {
+        this.clock = dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS); 
+      },1000)
     }
   },
   
   computed: {
     ins() {
       this.search()
-    },
-
-    now() {
-      return dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
     }
   },
 
   mounted(){
-    console.log();
+    this.now()
   }
 }).mount('#app');
