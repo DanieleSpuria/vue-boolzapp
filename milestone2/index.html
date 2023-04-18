@@ -61,8 +61,8 @@
             <div class="list">
               <ul>
                 <li
-                  @click="active(contact, index)"
-                  v-for="(contact, index) in contacts"
+                  @click="active(contact)"
+                  v-for="(contact) in contacts"
                   class="contact-message d-flex justify-between"
                   :class="{'active' : contact.name === userActive.name}"
                 >

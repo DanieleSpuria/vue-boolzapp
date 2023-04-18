@@ -5,18 +5,22 @@ createApp({
   data() {
     return{
       contacts,
-      userActive: {}
+      userActive: contacts[0]
     }
   },
 
   methods: {
-    active(contact, index) {
+    active(contact) {
       this.userActive = {
         name: contact.name,
         avatar: contact.avatar,
         messages: contact.messages
-      } 
-    },
+      }
+    }
   },
+
+  mounted() {
+    console.log(this.contacts[0]);
+  }
 
 }).mount('#app');
