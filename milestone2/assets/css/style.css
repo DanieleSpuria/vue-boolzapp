@@ -1,0 +1,236 @@
+/* General */ 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+}
+
+main{
+  height: 100%;
+  background-color: aqua;
+}
+
+img{
+  margin: 5px 0;
+}
+
+p{
+  font-size: 15px;
+}
+
+input::placeholder{
+  font-size: 15px;
+  color: #96868a;
+}
+
+i{
+  cursor: pointer;
+}
+
+.app{
+  height: 100%;
+}
+
+.container{
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
+
+
+
+
+/* Contacts */
+
+.contacts{
+  width: 35%;
+  height: 100%;
+}
+
+.user{
+  height: 8%;
+  background-color: #eaeaea;
+}
+
+.user .left{
+  width: 30%;
+}
+
+.user .left img{
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.user .right{
+  width: 70%;
+}
+
+.notifications{
+  height: 8%;
+  background-color: #8edafc;
+}
+
+.notifications .bell{
+  margin-right: 5px;
+  margin-left: 20px;
+  color: #8dd9fc;
+  background-color: white;
+}
+
+.notifications p{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contacts-list{
+  height: 84%;
+  background-color:white;
+}
+
+.contacts-list .search{
+  height: 8%;
+  padding: 1%;
+  background-color: #fafafa;
+}
+
+.contacts-list .box-search{
+  width: 98%;
+  height: 98%;
+  background-color: white;
+  border: 1px solid #f6f6f6;
+}
+
+.contacts-list .box-search i{
+  font-size: 12px;
+}
+
+.contacts-list .search input{
+  width: 100%;
+  padding: 8px 5px;
+  border: none;
+}
+
+.contacts-list .list{
+  height: 92%;
+  overflow: scroll;
+}
+
+.contact-message{
+  padding: 5px 0;
+  border-top: #e9ebeb 1px solid;
+  cursor: pointer;
+}
+
+.active{
+  background-color: #e9ebeb;
+}
+
+
+
+
+/* Chat */
+
+.chat{
+  width: 65%;
+  height: 100%;
+}
+
+.contact{
+  height: 8%;
+  background-color: #eaeaea;
+  border-left: 1px solid #d8d8d8;
+}
+
+.messages{
+  height: 84%;
+  padding: 20px 60px;
+  background-image: url('../img/mine.jpg');
+  overflow: scroll;
+}
+
+.message{
+  margin: 5px 0;
+}
+
+.message p{
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sent{
+  background-color: #d5f9ba;
+}
+
+.received{
+  background-color: white;
+}
+
+.writing{
+  height: 8%;
+  background-color: #f3eeea;
+}
+
+.writing .left,
+.writing .right{
+  width: 8%;
+}
+
+.writing input{
+ width: 84%;
+ height: 80%;
+ padding: 0 10px;
+ border: none;
+ border-radius: 5px;
+}
+
+
+
+
+/* Uilities */ 
+
+.d-flex{
+  display: flex;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-end{
+  justify-content: end;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.grey{
+  color: #b1b1b1;
+}
+
+.dark-grey{
+  color: #6b7376;
+}
+
+.m-10{
+  margin: 0 20px;
+}
+
+.circle{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
