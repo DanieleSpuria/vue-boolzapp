@@ -113,13 +113,13 @@
           <!-- /CONTACT -->
           
           <!-- MESSAGES -->
-          <div class="messages">
-              <div class="message d-flex">
-                <p class="received">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi possimus culpa dicta maxime architecto explicabo doloribus, quam est placeat libero, nesciunt totam iusto quos nobis obcaecati pariatur voluptates veritatis, quibusdam ipsam perferendis sunt. Rem doloribus soluta hic dolor, id autem reprehenderit deserunt asperiores molestias numquam, debitis culpa fuga porro molestiae?</p>
-              </div>
-              <div class="message d-flex justify-end">
-                <p class="sent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quo pariatur beatae mollitia quis iste animi ducimus modi in neque accusamus vel doloremque, fugit quaerat quos fugiat temporibus, ipsa esse. Commodi facere nesciunt quaerat. Voluptatem enim quam ipsam id cum voluptate distinctio asperiores natus, perspiciatis laboriosam maxime sint, quis eos.</p>
-              </div>
+          <div
+            class="chat-messages"
+          >
+                <p 
+                  v-for="message in userActive.messages"
+                  :class="message.status === 'sent' ? 'sent' : 'received'"
+                >{{message.message}}</p>
           </div>
           <!-- /MESSAGES -->
           

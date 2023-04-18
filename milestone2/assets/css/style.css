@@ -150,24 +150,22 @@ i{
   border-left: 1px solid #d8d8d8;
 }
 
-.messages{
+.chat-messages{
   height: 84%;
   padding: 20px 60px;
   background-image: url('../img/mine.jpg');
   overflow: scroll;
 }
 
-.message{
-  margin: 5px 0;
-}
-
-.message p{
+.chat-messages p{
   max-width: 60%;
+  margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
 }
 
 .sent{
+  float: right;
   background-color: #d5f9ba;
 }
 
@@ -234,4 +232,10 @@ i{
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }

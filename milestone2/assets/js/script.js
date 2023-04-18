@@ -16,7 +16,7 @@ createApp({
           this.userActive = {
             name: contact.name,
             avatar: contact.avatar,
-            message: contact.messages
+            messages: contact.messages
           }
         }
       })
@@ -25,6 +25,6 @@ createApp({
 
   mounted(){
     this.active()
-    console.log(this.userActive);
+    console.log(this.userActive.messages);
   }
 }).mount('#app');
