@@ -64,6 +64,11 @@ createApp({
       },1000)
     },
 
+    rmv(message,i) {
+      this.userActive.messages.splice(i,1)
+      if (message.audio) this.audioPause()
+    },
+ 
     audioPlay(){
       this.play.play()
       this.click = true;
