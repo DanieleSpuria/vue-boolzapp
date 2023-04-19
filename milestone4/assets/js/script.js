@@ -45,13 +45,12 @@ createApp({
     },
 
     search() {
-      contacts.forEach(contact => {
+      this.contacts.forEach(contact => {
         if (this.inputSearch === '') contact.visible = true;
-          else {
-            if (contact.name.toUpperCase().includes(this.inputSearch.toUpperCase())) contact.visible = true;
-            else contact.visible = false;
-          }  
-        console.log(contact.visible, this.inputSearch)
+        else {
+          if (contact.name.toUpperCase().includes(this.inputSearch.toUpperCase())) contact.visible = true;
+          else contact.visible = false;
+        }  
       })
     },
 

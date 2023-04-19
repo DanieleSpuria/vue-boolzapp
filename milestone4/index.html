@@ -80,13 +80,13 @@
                     <div
                       class="text">
                       <h5>{{contact.name}}</h5>
-                      <span class="grey">{{contact.messages[contact.messages.length - 1].message}}</span>
+                      <span v-if="contact.messages.length" class="grey">{{contact.messages[contact.messages.length - 1].message}}</span>
                     </div>
                   </div>
                 
                   <div
                     class="left d-flex justify-end grey m-10">
-                    <span >{{contact.messages[contact.messages.length - 1].date}}</span>
+                    <span v-if="contact.messages.length">{{contact.messages[contact.messages.length - 1].date}}</span>
                   </div>
                 </li>
               </ul>
@@ -129,7 +129,7 @@
               v-show="!bho"
               :class="message.status === 'sent' ? 'sent' : 'received'"
               class="chat-message">
-                <span>{{message.message}}</span>
+                <span>{{message.message}} {{i}}</span>
                 <i class="fa-solid fa-chevron-down grey"></i>
                 <div class="tendina">
                   <span
@@ -137,7 +137,7 @@
                     @click="bho = true">Info messaggio</span>
                   <span
                     class="dark-grey"
-                    @click="this.userActive.messages.splice(i,1)">Elimina messaggio</span>
+                    @click="userActive.messages.splice(i,1)">Elimina messaggio</span>
                 </div>
                 <span class="grey">{{message.date}}</span>
               </div>
@@ -169,6 +169,9 @@
         </div>
         <!-- /CHAT -->  
       </div>
+      <audio :autoplay="bho">
+        <source src="meatgrinder.mp3" type="audio/mp3">
+      </audio>
     </main>
   </div>
 
