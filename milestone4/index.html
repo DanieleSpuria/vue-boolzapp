@@ -19,6 +19,13 @@
     <main class="d-flex align-center">
       <div class="container d-flex">
 
+
+
+
+
+
+
+
         <!-- CONTACTS -->
         <div class="contacts">
 
@@ -97,6 +104,13 @@
         </div>
         <!-- /CONTACTS -->
 
+
+
+
+
+
+
+
         <!-- CHAT -->
         <div class="chat">
 
@@ -130,7 +144,9 @@
             :class="message.status === 'sent' ? 'sent' : 'received'"
             class="chat-message">
               <span v-if="!message.audio">{{message.message}}</span>
-              <div  v-else class="play d-flex justify-between align-center">
+              <i class="fa-solid fa-chevron-down grey"></i>
+              <div class="play d-flex justify-between align-center"
+              v-if="message.audio">
                 <i
                 v-if="!click"
                 @click="audioPlay"
@@ -142,7 +158,6 @@
                 <div class="line"></div>
                 <!-- <span>{{time}}</span> -->
               </div>
-              <i class="fa-solid fa-chevron-down grey"></i>
               <span class="grey">{{message.date}}</span>
               <div class="tendina">
                 <span
@@ -179,6 +194,14 @@
 
         </div>
         <!-- /CHAT -->  
+
+
+
+
+
+
+
+
       </div>
     </main>
   </div>
