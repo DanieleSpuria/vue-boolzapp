@@ -89,7 +89,8 @@ createApp({
 
     bHo() {
       this.bho = !this.bho;
-      this.flash.play()
+      this.flash.play();
+      this.flash.loop = true;
       this.audioPause()
     }
   },
