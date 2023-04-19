@@ -23,7 +23,8 @@ createApp({
         name: contact.name,
         avatar: contact.avatar,
         messages: contact.messages
-      }
+      },
+      this.audioPause()
     },
 
     sendMessage() {
@@ -65,12 +66,12 @@ createApp({
 
     audioPlay(){
       this.play.play()
-      this.click = !this.click;
+      this.click = true;
     },
     
     audioPause(){
       this.play.pause()
-      this.click = !this.click;
+      this.click = false;
     },
 
     bHo() {
