@@ -9,7 +9,8 @@ createApp({
       userActive: contacts[0],
       inputSearch: '',
       inputMessage: '',
-      clock: null
+      clock: null,
+      bho: false
     }
   },
 

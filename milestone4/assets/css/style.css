@@ -14,8 +14,8 @@ body{
 
 main{
   height: 100%;
-  background-color: aqua;
-}
+  background-image: linear-gradient(#009688 20%,#dadbd3 1px, #dadbd3 80%);
+} 
 
 img{
   margin: 5px 0;
@@ -166,6 +166,7 @@ i{
   border-radius: 5px;
   word-wrap: break-word;
   clear: both;
+  box-shadow: 1px 1px 3px grey;
 }
 
 .chat-message i, .chat-message span:first-child{
@@ -200,7 +201,7 @@ i{
   border-radius: 5px;
   background-color: white;
   opacity: .8;
-  box-shadow: 0 0 3px grey;
+  box-shadow: 1px 1px 3px grey;
   cursor: pointer;
 }
 
@@ -240,6 +241,31 @@ i{
  padding: 0 10px;
  border: none;
  border-radius: 5px;
+}
+
+.bho {
+  display: none;
+  width: 100%;
+  height: 100%;
+  animation: boz 2s infinite
+}
+
+.flash {
+  background-image: none;
+  animation: flash 2s infinite
+}
+
+@keyframes boz {
+  0%   {transform: scale(0);}
+  50%  {transform: scale(1);}
+  100% {transform: scale(0);}
+}
+
+@keyframes flash {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
 }
 
 

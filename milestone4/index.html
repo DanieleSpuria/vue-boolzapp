@@ -122,21 +122,31 @@
           <!-- MESSAGES -->
           <div
             class="chat-messages "
+            :class="{'flash' : bho}"
           >
               <div 
               v-for="(message, i) in userActive.messages"
+              v-show="!bho"
               :class="message.status === 'sent' ? 'sent' : 'received'"
               class="chat-message">
                 <span>{{message.message}}</span>
                 <i class="fa-solid fa-chevron-down grey"></i>
                 <div class="tendina">
-                  <span class="dark-grey">Info messaggio</span>
+                  <span
+                    class="dark-grey"
+                    @click="bho = true">Info messaggio</span>
                   <span
                     class="dark-grey"
                     @click="this.userActive.messages.splice(i,1)">Elimina messaggio</span>
                 </div>
                 <span class="grey">{{message.date}}</span>
               </div>
+
+              <img
+                src="assets/img/bho.svg"
+                alt="bho"
+                class="bho"
+                :class="{'d-flex' : bho}">
           </div>
           <!-- /MESSAGES -->
           
