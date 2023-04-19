@@ -13,7 +13,8 @@ createApp({
       bho: false,
       click: false,
       play: new Audio('meatgrinder.wav'),
-      flash: new Audio('risata.mp3')
+      flash: new Audio('cacciatori-di-teste.mp3'),
+      // time: 0
     }
   },
 
@@ -78,6 +79,13 @@ createApp({
       this.play.pause()
       this.click = false;
     },
+    
+    // timeTrack() {
+    //   this.time = (this.play.duration / 60).toFixed(2)
+    //   setTimeout(() => {
+    //     this.time--
+    //   }, 1000);
+    // },
 
     bHo() {
       this.bho = !this.bho;
@@ -88,5 +96,7 @@ createApp({
   
   mounted(){
     this.now()
+    // this.timeTrack()
+    // console.log(this.play.ended);
   }
 }).mount('#app');
