@@ -129,7 +129,6 @@
               v-show="!bho"
               :class="message.status === 'sent' ? 'sent' : 'received'"
               class="chat-message">
-<<<<<<< HEAD
                 <span v-if="!message.audio">{{message.message}}</span>
                 <i class="fa-solid fa-chevron-down grey"></i>
                 <div class="play d-flex justify-between align-center" v-if="message.audio">
@@ -142,17 +141,6 @@
                   @click="audioPause"
                   class="fa-solid fa-pause dark-grey"></i>
                   <div class="line"></div>
-=======
-                <span>{{message.message}} {{i}}</span>
-                <i class="fa-solid fa-chevron-down grey"></i>
-                <div class="tendina">
-                  <span
-                    class="dark-grey"
-                    @click="bho = true">Info messaggio</span>
-                  <span
-                    class="dark-grey"
-                    @click="userActive.messages.splice(i,1)">Elimina messaggio</span>
->>>>>>> origin/main
                 </div>
                 <span class="grey">{{message.date}}</span>
                 <div class="tendina">
@@ -192,9 +180,6 @@
         </div>
         <!-- /CHAT -->  
       </div>
-      <audio :autoplay="bho">
-        <source src="meatgrinder.mp3" type="audio/mp3">
-      </audio>
     </main>
   </div>
     <script type="module" src="assets/js/script.js"></script>

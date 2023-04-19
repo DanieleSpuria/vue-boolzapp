@@ -195,20 +195,12 @@ i{
   position: absolute;
   z-index: 99;
   flex-direction: column;
-<<<<<<< HEAD
   top: 30%;
-=======
-  top: 55%;
->>>>>>> origin/main
   right: -50px;
   width: 130px;
   padding: 4px 10px;
   border-radius: 5px;
   background-color: white;
-<<<<<<< HEAD
-=======
-  opacity: .8;
->>>>>>> origin/main
   box-shadow: 1px 1px 3px grey;
   cursor: pointer;
 }
