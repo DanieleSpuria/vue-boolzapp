@@ -124,41 +124,40 @@
             class="chat-messages "
             :class="{'flash' : bho}"
           >
-              <div 
-              v-for="(message, i) in userActive.messages"
-              v-show="!bho"
-              :class="message.status === 'sent' ? 'sent' : 'received'"
-              class="chat-message">
-                <span v-if="!message.audio">{{message.message}}</span>
-                <i class="fa-solid fa-chevron-down grey"></i>
-                <div class="play d-flex justify-between align-center" v-if="message.audio">
-                  <i
-                  v-if="!click"
-                  @click="audioPlay"
-                  class="fa-solid fa-play dark-grey"></i>
-                  <i
-                  v-if="click"
-                  @click="audioPause"
-                  class="fa-solid fa-pause dark-grey"></i>
-                  <div class="line"></div>
-                  <!-- <span>{{time}}</span> -->
-                </div>
-                <span class="grey">{{message.date}}</span>
-                <div class="tendina">
-                  <span
-                    class="dark-grey"
-                    @click="bHo">Info messaggio</span>
-                  <span
-                    class="dark-grey"
-                    @click="rmv(message,i)">Elimina messaggio</span>
-                </div>
+            <div 
+            v-for="(message, i) in userActive.messages"
+            v-show="!bho"
+            :class="message.status === 'sent' ? 'sent' : 'received'"
+            class="chat-message">
+              <span v-if="!message.audio">{{message.message}}</span>
+              <div  v-else class="play d-flex justify-between align-center">
+                <i
+                v-if="!click"
+                @click="audioPlay"
+                class="fa-solid fa-play dark-grey"></i>
+                <i
+                v-if="click"
+                @click="audioPause"
+                class="fa-solid fa-pause dark-grey"></i>
+                <div class="line"></div>
+                <!-- <span>{{time}}</span> -->
               </div>
-
-              <img
-                src="assets/img/bho.svg"
-                alt="bho"
-                class="bho"
-                :class="{'d-flex' : bho}">
+              <i class="fa-solid fa-chevron-down grey"></i>
+              <span class="grey">{{message.date}}</span>
+              <div class="tendina">
+                <span
+                  class="dark-grey"
+                  @click="bHo">Info messaggio</span>
+                <span
+                  class="dark-grey"
+                  @click="rmv(message,i)">Elimina messaggio</span>
+              </div>
+            </div>
+            <img
+              src="assets/img/bho.svg"
+              alt="bho"
+              class="bho"
+              :class="{'d-flex' : bho}">
           </div>
           <!-- /MESSAGES -->
           
