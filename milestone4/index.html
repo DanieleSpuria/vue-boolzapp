@@ -58,8 +58,8 @@
                 <input
                   type="text"
                   placeholder="Cerca o inizia una nuova chat"
-                  v-model="inputSearch">
-                {{ins}}
+                  v-model="inputSearch"
+                  @keyup="search">
               </div>
             </div>
 
@@ -127,6 +127,11 @@
               :class="message.status === 'sent' ? 'sent' : 'received'"
               class="chat-message">
                 <span>{{message.message}}</span>
+                <i class="fa-solid fa-chevron-down grey"></i>
+                <div class="tendina">
+                  <span class="dark-grey">Info messaggio</span>
+                  <span class="dark-grey">Elimina messaggio</span>
+                </div>
                 <span class="grey">{{message.date}}</span>
               </div>
           </div>

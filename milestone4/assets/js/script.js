@@ -5,13 +5,11 @@ import contacts from './db.js';
 createApp({
   data() {
     return{
-      clock: null,
       contacts,
       userActive: contacts[0],
       inputSearch: '',
       inputMessage: '',
-      splitSearch: [],
-      splitContact: []
+      clock: null
     }
   },
 
@@ -46,21 +44,13 @@ createApp({
     },
 
     search() {
-      this.splitSearch = this.inputSearch.toUpperCase().split('');
       contacts.forEach(contact => {
-        this.splitContact = contact.name.toUpperCase().split('');
-        
-        if (this.splitSearch.length === 0) {
-          contact.visible = true
-        } else {
-          for (let i = 0; i < this.splitSearch.length; i++) {
-            if (this.splitContact.includes(this.splitSearch[i])) {
-              contact.visible = true;
-            } else {
-              contact.visible = false;
-            }
-          }
-        }
+        if (this.inputSearch === '') contact.visible = true;
+          else {
+            if (contact.name.toUpperCase().includes(this.inputSearch.toUpperCase())) contact.visible = true;
+            else contact.visible = false;
+          }  
+        console.log(contact.visible, this.inputSearch)
       })
     },
 
@@ -71,12 +61,6 @@ createApp({
     }
   },
   
-  computed: {
-    ins() {
-      this.search()
-    }
-  },
-
   mounted(){
     this.now()
   }

@@ -159,6 +159,7 @@ i{
 }
 
 .chat-message{
+  position: relative;
   max-width: 55%;
   margin: 5px 0;
   padding: 4px 10px;
@@ -167,10 +168,57 @@ i{
   clear: both;
 }
 
-.chat-message span:last-child{
+.chat-message i, .chat-message span:first-child{
+  display: inline-block;
+}
+
+.chat-message i{
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.chat-message i:hover ~ .tendina,
+.chat-message .tendina:hover{
+  display: flex;
+}
+
+.chat-message span:nth-of-type(2){
   text-align: end;
   font-size: 10px;
   margin-top: 2px;
+}
+
+.chat-message .tendina{
+  display: none;
+  position: absolute;
+  z-index: 99;
+  flex-direction: column;
+  top: 55%;
+  width: 130px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: .8;
+  box-shadow: 0 0 3px grey;
+  cursor: pointer;
+}
+
+.chat-message.received .tendina{
+  left: 70%;
+}
+
+.chat-message.sent .tendina{
+  left: 50%;
+}
+
+.chat-message .tendina span{
+  padding: 2px;
+  font-size: 12px;
+  text-align: start;
+}
+
+.chat-message .tendina span:hover{
+  color: skyblue;
 }
 
 .sent{
