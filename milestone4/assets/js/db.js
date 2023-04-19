@@ -27,6 +27,7 @@ export default [
           {
               date: '10/01/2020 16:19:10',
               audio: true,
+              message: '2:06',
               status: 'sent'
           }
       ],
