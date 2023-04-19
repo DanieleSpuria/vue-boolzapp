@@ -18,6 +18,16 @@ export default [
               date: '10/01/2020 16:15:22',
               message: 'Tutto fatto!',
               status: 'received'
+          },
+          {
+              date: '10/01/2020 16:18:50',
+              message: 'Senti questo!',
+              status: 'sent'
+          },
+          {
+              date: '10/01/2020 16:19:10',
+              audio: true,
+              status: 'sent'
           }
       ],
   },

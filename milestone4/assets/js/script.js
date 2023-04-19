@@ -9,7 +9,11 @@ createApp({
       userActive: contacts[0],
       inputSearch: '',
       inputMessage: '',
-      clock: null
+      clock: null,
+      bho: false,
+      click: false,
+      play: new Audio('meatgrinder.wav'),
+      flash: new Audio('risata.mp3')
     }
   },
 
@@ -44,13 +48,12 @@ createApp({
     },
 
     search() {
-      contacts.forEach(contact => {
+      this.contacts.forEach(contact => {
         if (this.inputSearch === '') contact.visible = true;
-          else {
-            if (contact.name.toUpperCase().includes(this.inputSearch.toUpperCase())) contact.visible = true;
-            else contact.visible = false;
-          }  
-        console.log(contact.visible, this.inputSearch)
+        else {
+          if (contact.name.toUpperCase().includes(this.inputSearch.toUpperCase())) contact.visible = true;
+          else contact.visible = false;
+        }  
       })
     },
 
@@ -58,6 +61,22 @@ createApp({
       setInterval(() => {
         this.clock = dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS); 
       },1000)
+    },
+
+    audioPlay(){
+      this.play.play()
+      this.click = !this.click;
+    },
+    
+    audioPause(){
+      this.play.pause()
+      this.click = !this.click;
+    },
+
+    bHo() {
+      this.bho = !this.bho;
+      this.flash.play()
+      this.audioPause()
     }
   },
   

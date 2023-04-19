@@ -14,8 +14,8 @@ body{
 
 main{
   height: 100%;
-  background-color: aqua;
-}
+  background-image: linear-gradient(#009688 20%,#dadbd3 1px, #dadbd3 80%);
+} 
 
 img{
   margin: 5px 0;
@@ -166,6 +166,7 @@ i{
   border-radius: 5px;
   word-wrap: break-word;
   clear: both;
+  box-shadow: 1px 1px 3px grey;
 }
 
 .chat-message i, .chat-message span:first-child{
@@ -173,6 +174,7 @@ i{
 }
 
 .chat-message i{
+  float: right;
   margin-left: 10px;
   font-size: 12px;
 }
@@ -182,7 +184,7 @@ i{
   display: flex;
 }
 
-.chat-message span:nth-of-type(2){
+.chat-message span:not(:first-child){
   text-align: end;
   font-size: 10px;
   margin-top: 2px;
@@ -193,22 +195,14 @@ i{
   position: absolute;
   z-index: 99;
   flex-direction: column;
-  top: 55%;
+  top: 30%;
+  right: -50px;
   width: 130px;
   padding: 4px 10px;
   border-radius: 5px;
   background-color: white;
-  opacity: .8;
-  box-shadow: 0 0 3px grey;
+  box-shadow: 1px 1px 3px grey;
   cursor: pointer;
-}
-
-.chat-message.received .tendina{
-  left: 70%;
-}
-
-.chat-message.sent .tendina{
-  left: 50%;
 }
 
 .chat-message .tendina span{
@@ -219,6 +213,18 @@ i{
 
 .chat-message .tendina span:hover{
   color: skyblue;
+}
+
+.chat-message .play i{
+  font-size: 18px;
+  margin: 0;
+}
+
+.chat-message .play .line{
+  margin: 0 5px;
+  height: 2px;
+  width: 100px; 
+  background-color: grey;
 }
 
 .sent{
@@ -247,6 +253,31 @@ i{
  padding: 0 10px;
  border: none;
  border-radius: 5px;
+}
+
+.bho {
+  display: none;
+  width: 100%;
+  height: 100%;
+  animation: boz 2s infinite
+}
+
+.flash {
+  background-image: none;
+  animation: flash 2s infinite
+}
+
+@keyframes boz {
+  0%   {transform: scale(0);}
+  50%  {transform: scale(1);}
+  100% {transform: scale(0);}
+}
+
+@keyframes flash {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
 }
 
 

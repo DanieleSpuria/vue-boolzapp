@@ -77,15 +77,16 @@
                     alt="avatar"
                     class="m-10 circle">
                     
-                    <div class="text">
+                    <div
+                      class="text">
                       <h5>{{contact.name}}</h5>
-                      <span class="grey">{{contact.messages[contact.messages.length - 1].message}}</span>
+                      <span v-if="contact.messages.length" class="grey">{{contact.messages[contact.messages.length - 1].message}}</span>
                     </div>
                   </div>
                 
                   <div
                     class="left d-flex justify-end grey m-10">
-                    <span >{{contact.messages[contact.messages.length - 1].date}}</span>
+                    <span v-if="contact.messages.length">{{contact.messages[contact.messages.length - 1].date}}</span>
                   </div>
                 </li>
               </ul>
@@ -121,19 +122,42 @@
           <!-- MESSAGES -->
           <div
             class="chat-messages "
+            :class="{'flash' : bho}"
           >
               <div 
-              v-for="message in userActive.messages"
+              v-for="(message, i) in userActive.messages"
+              v-show="!bho"
               :class="message.status === 'sent' ? 'sent' : 'received'"
               class="chat-message">
-                <span>{{message.message}}</span>
+                <span v-if="!message.audio">{{message.message}}</span>
                 <i class="fa-solid fa-chevron-down grey"></i>
-                <div class="tendina">
-                  <span class="dark-grey">Info messaggio</span>
-                  <span class="dark-grey">Elimina messaggio</span>
+                <div class="play d-flex justify-between align-center" v-if="message.audio">
+                  <i
+                  v-if="!click"
+                  @click="audioPlay"
+                  class="fa-solid fa-play dark-grey"></i>
+                  <i
+                  v-if="click"
+                  @click="audioPause"
+                  class="fa-solid fa-pause dark-grey"></i>
+                  <div class="line"></div>
                 </div>
                 <span class="grey">{{message.date}}</span>
+                <div class="tendina">
+                  <span
+                    class="dark-grey"
+                    @click="bHo">Info messaggio</span>
+                  <span
+                    class="dark-grey"
+                    @click="userActive.messages.splice(i,1)">Elimina messaggio</span>
+                </div>
               </div>
+
+              <img
+                src="assets/img/bho.svg"
+                alt="bho"
+                class="bho"
+                :class="{'d-flex' : bho}">
           </div>
           <!-- /MESSAGES -->
           
@@ -158,7 +182,6 @@
       </div>
     </main>
   </div>
-
-  <script type="module" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
 </body>
 </html>
