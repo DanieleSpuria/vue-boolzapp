@@ -77,7 +77,8 @@
                     alt="avatar"
                     class="m-10 circle">
                     
-                    <div class="text">
+                    <div
+                      class="text">
                       <h5>{{contact.name}}</h5>
                       <span class="grey">{{contact.messages[contact.messages.length - 1].message}}</span>
                     </div>
@@ -123,14 +124,16 @@
             class="chat-messages "
           >
               <div 
-              v-for="message in userActive.messages"
+              v-for="(message, i) in userActive.messages"
               :class="message.status === 'sent' ? 'sent' : 'received'"
               class="chat-message">
                 <span>{{message.message}}</span>
                 <i class="fa-solid fa-chevron-down grey"></i>
                 <div class="tendina">
                   <span class="dark-grey">Info messaggio</span>
-                  <span class="dark-grey">Elimina messaggio</span>
+                  <span
+                    class="dark-grey"
+                    @click="this.userActive.messages.splice(i,1)">Elimina messaggio</span>
                 </div>
                 <span class="grey">{{message.date}}</span>
               </div>

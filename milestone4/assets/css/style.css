@@ -194,6 +194,7 @@ i{
   z-index: 99;
   flex-direction: column;
   top: 55%;
+  right: -50px;
   width: 130px;
   padding: 4px 10px;
   border-radius: 5px;
@@ -201,14 +202,6 @@ i{
   opacity: .8;
   box-shadow: 0 0 3px grey;
   cursor: pointer;
-}
-
-.chat-message.received .tendina{
-  left: 70%;
-}
-
-.chat-message.sent .tendina{
-  left: 50%;
 }
 
 .chat-message .tendina span{
