@@ -12,7 +12,7 @@ createApp({
       clock: null,
       bho: false,
       click: false,
-      play: new Audio('meatgrinder.wav'),
+      play: new Audio('MF Doom - Meat Grinder (Birra del Soul Remix).wav'),
       flash: new Audio('cacciatori-di-teste.mp3'),
       autoStop: null 
     }
