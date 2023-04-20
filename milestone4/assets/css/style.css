@@ -227,11 +227,41 @@ i{
   margin: 5px 0;
 }
 
-.chat-message .play .line{
+.chat-message .box-line{
+  position: relative;
+}
+
+.chat-message .play .line,
+.chat-message .play .white-line{
   margin: 0 5px;
   height: 2px;
-  width: 100px; 
+}
+
+.chat-message .play .line{
+  width: 120px; 
   background-color: grey;
+}
+  
+.chat-message .play .white-line{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: lightgrey;
+}
+
+.playLine{
+  width: 120px; 
+  animation-name: cose;
+  animation-duration: 126s;
+}
+
+@keyframes cose {
+  0% {width: 0};
+  100% {width: 120px;}
+}
+
+.stop{
+  width: 0;
 }
 
 .sent{

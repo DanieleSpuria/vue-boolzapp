@@ -14,7 +14,7 @@ createApp({
       click: false,
       play: new Audio('meatgrinder.wav'),
       flash: new Audio('cacciatori-di-teste.mp3'),
-      autoStop: null
+      autoStop: null 
     }
   },
 
@@ -70,20 +70,21 @@ createApp({
       if (message.audio) this.audioPause()
     },
  
-    audioPlay(){
+    audioPlay() {
       this.play.play()
       this.click = true;
       this.autoStop = setInterval(() => {
         if (this.play.ended) this.click = false;
-        if (!this.click) clearInterval(this.autoStop)
+        if (!this.click) {
+          clearInterval(this.autoStop)
+        }
       }, 1000);
     },
     
-    audioPause(){
+    audioPause() {
       this.play.pause()
       this.click = false;
-    },
-    
+    }, 
 
     bHo() {
       this.bho = !this.bho;
@@ -93,7 +94,7 @@ createApp({
     }
   },
 
-  mounted(){
+  mounted() {
     this.now()
   }
 }).mount('#app');

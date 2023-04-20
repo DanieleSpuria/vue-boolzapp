@@ -155,8 +155,13 @@
                 v-else
                 @click="audioPause"
                 class="fa-solid fa-pause dark-grey"></i>
-                <div class="line"></div>
-                <!-- <span>{{time}}</span> -->
+                <div class="box-line">
+                  <div class="line"></div>
+                  <div 
+                  id="white-line"
+                  class="white-line"
+                  :class="click ? 'playLine' : 'stop'"></div>
+                </div>
               </div>
               <span class="grey">{{message.date}}</span>
               <div class="tendina">
